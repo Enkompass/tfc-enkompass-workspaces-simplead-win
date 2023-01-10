@@ -39,3 +39,19 @@ variable "azs" {
  description = "Availability Zones"
  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
+
+#Simple AD Domain
+variable "domain" {
+  description = "Windows Domain"
+  default     = ""
+}
+
+variable "domain_password" {
+  description = "Windows Domain Password"
+  default     = ""
+}
+
+variable "ad_size" {
+  description = "Active Directory Size"
+  default     = "Small"
+}

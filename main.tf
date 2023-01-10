@@ -103,9 +103,9 @@ resource "aws_route_table_association" "private_assoc" {
 
 # AWS Directory Service Directory
 resource "aws_directory_service_directory" "simple_ad_directory" {
-  name     = "hubcitytaxservice.local"
-  password = "P@$$word123"
-  size     = "Small"
+  name     = var.domain
+  password = var.domain_password
+  size     = var.ad_size
   vpc_settings {
     vpc_id = aws_vpc.workspaces-vpc.id
     subnet_ids = [ aws_subnet.private_subnets[0].id, aws_subnet.private_subnets[2].id]
