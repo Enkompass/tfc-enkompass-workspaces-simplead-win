@@ -108,7 +108,7 @@ resource "aws_directory_service_directory" "simple_ad_directory" {
   size     = var.ad_size
   vpc_settings {
     vpc_id = aws_vpc.workspaces-vpc.id
-    subnet_ids = [ aws_subnet.private_subnets[0].id, aws_subnet.private_subnets[2].id]
+    subnet_ids = [ aws_subnet.private_subnets[1].id, aws_subnet.private_subnets[2].id]
   }
   tags = {
     Name = "SimpleAD"
@@ -147,7 +147,7 @@ resource "aws_iam_role_policy_attachment" "workspaces-default-self-service-acces
 # Workspaces Directory Attachment
 resource "aws_workspaces_directory" "workspaces-directory" {
  directory_id = aws_directory_service_directory.simple_ad_directory.id
-  subnet_ids   = [ aws_subnet.private_subnets[0].id, aws_subnet.private_subnets[2].id]
+  subnet_ids   = [ aws_subnet.private_subnets[1].id, aws_subnet.private_subnets[2].id]
   depends_on = [aws_iam_role.workspaces-default]
 }
 
