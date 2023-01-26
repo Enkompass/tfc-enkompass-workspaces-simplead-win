@@ -197,7 +197,7 @@ resource "aws_workspaces_workspace" "daniel" {
 
   # Administrator for SimpleAD
   # Admin for ManagedAD
-  user_name = "Daniel Litvin"
+  user_name = "dlitvin"
   root_volume_encryption_enabled = false
   user_volume_encryption_enabled = false
   volume_encryption_key = aws_kms_key.workspaces-kms.arn
@@ -225,7 +225,7 @@ resource "aws_workspaces_workspace" "david" {
 
   # Administrator for SimpleAD
   # Admin for ManagedAD
-  user_name = "David Meyer"
+  user_name = "dmeyer"
   root_volume_encryption_enabled = false
   user_volume_encryption_enabled = false
   volume_encryption_key = aws_kms_key.workspaces-kms.arn
@@ -253,7 +253,7 @@ resource "aws_workspaces_workspace" "jason" {
 
   # Administrator for SimpleAD
   # Admin for ManagedAD
-  user_name = "Jason Meyer"
+  user_name = "jmeyer"
   root_volume_encryption_enabled = false
   user_volume_encryption_enabled = false
   volume_encryption_key = aws_kms_key.workspaces-kms.arn
@@ -282,7 +282,7 @@ resource "aws_workspaces_workspace" "karam" {
 
   # Administrator for SimpleAD
   # Admin for ManagedAD
-  user_name = "Karam Gill"
+  user_name = "kgill"
   root_volume_encryption_enabled = false
   user_volume_encryption_enabled = false
   volume_encryption_key = aws_kms_key.workspaces-kms.arn
@@ -310,7 +310,7 @@ resource "aws_workspaces_workspace" "ray" {
 
   # Administrator for SimpleAD
   # Admin for ManagedAD
-  user_name = "Ray Gill"
+  user_name = "rgill"
   root_volume_encryption_enabled = false
   user_volume_encryption_enabled = false
   volume_encryption_key = aws_kms_key.workspaces-kms.arn
