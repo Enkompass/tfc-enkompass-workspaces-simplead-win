@@ -191,4 +191,144 @@ resource "aws_workspaces_workspace" "workspaces" {
     aws_workspaces_directory.workspaces-directory
   ]
 }
+resource "aws_workspaces_workspace" "daniel" {
+  directory_id = aws_workspaces_directory.workspaces-directory.id
+  bundle_id = data.aws_workspaces_bundle.standard_windows.id
 
+  # Administrator for SimpleAD
+  # Admin for ManagedAD
+  user_name = "Daniel Litvin"
+  root_volume_encryption_enabled = false
+  user_volume_encryption_enabled = false
+  volume_encryption_key = aws_kms_key.workspaces-kms.arn
+  workspace_properties {
+    compute_type_name = "STANDARD"
+    user_volume_size_gib = 50
+    root_volume_size_gib = 80
+    running_mode = "ALWAYS_ON"
+    running_mode_auto_stop_timeout_in_minutes = 60
+  }
+  tags = {
+    Name = "Daniel Litvin"
+    Environment = "Production"
+    "Deployed By" = "Enkompass"
+  }
+
+  depends_on = [
+    aws_iam_role.workspaces-default,
+    aws_workspaces_directory.workspaces-directory
+  ]
+}
+resource "aws_workspaces_workspace" "david" {
+  directory_id = aws_workspaces_directory.workspaces-directory.id
+  bundle_id = data.aws_workspaces_bundle.standard_windows.id
+
+  # Administrator for SimpleAD
+  # Admin for ManagedAD
+  user_name = "David Meyer"
+  root_volume_encryption_enabled = false
+  user_volume_encryption_enabled = false
+  volume_encryption_key = aws_kms_key.workspaces-kms.arn
+  workspace_properties {
+    compute_type_name = "STANDARD"
+    user_volume_size_gib = 50
+    root_volume_size_gib = 80
+    running_mode = "ALWAYS_ON"
+    running_mode_auto_stop_timeout_in_minutes = 60
+  }
+  tags = {
+    Name = "David Meyer"
+    Environment = "Production"
+    "Deployed By" = "Enkompass"
+  }
+
+  depends_on = [
+    aws_iam_role.workspaces-default,
+    aws_workspaces_directory.workspaces-directory
+  ]
+}
+resource "aws_workspaces_workspace" "jason" {
+  directory_id = aws_workspaces_directory.workspaces-directory.id
+  bundle_id = data.aws_workspaces_bundle.standard_windows.id
+
+  # Administrator for SimpleAD
+  # Admin for ManagedAD
+  user_name = "Jason Meyer"
+  root_volume_encryption_enabled = false
+  user_volume_encryption_enabled = false
+  volume_encryption_key = aws_kms_key.workspaces-kms.arn
+  workspace_properties {
+    compute_type_name = "STANDARD"
+    user_volume_size_gib = 50
+    root_volume_size_gib = 80
+    running_mode = "ALWAYS_ON"
+    running_mode_auto_stop_timeout_in_minutes = 60
+  }
+  tags = {
+    Name = "Jason Meyer"
+    Environment = "Production"
+    "Deployed By" = "Enkompass"
+  }
+
+  depends_on = [
+    aws_iam_role.workspaces-default,
+    aws_workspaces_directory.workspaces-directory
+  ]
+}
+
+resource "aws_workspaces_workspace" "karam" {
+  directory_id = aws_workspaces_directory.workspaces-directory.id
+  bundle_id = data.aws_workspaces_bundle.standard_windows.id
+
+  # Administrator for SimpleAD
+  # Admin for ManagedAD
+  user_name = "Karam Gill"
+  root_volume_encryption_enabled = false
+  user_volume_encryption_enabled = false
+  volume_encryption_key = aws_kms_key.workspaces-kms.arn
+  workspace_properties {
+    compute_type_name = "STANDARD"
+    user_volume_size_gib = 50
+    root_volume_size_gib = 80
+    running_mode = "ALWAYS_ON"
+    running_mode_auto_stop_timeout_in_minutes = 60
+  }
+  tags = {
+    Name = "Karam Gill"
+    Environment = "Production"
+    "Deployed By" = "Enkompass"
+  }
+
+  depends_on = [
+    aws_iam_role.workspaces-default,
+    aws_workspaces_directory.workspaces-directory
+  ]
+}
+resource "aws_workspaces_workspace" "ray" {
+  directory_id = aws_workspaces_directory.workspaces-directory.id
+  bundle_id = data.aws_workspaces_bundle.standard_windows.id
+
+  # Administrator for SimpleAD
+  # Admin for ManagedAD
+  user_name = "Ray Gill"
+  root_volume_encryption_enabled = false
+  user_volume_encryption_enabled = false
+  volume_encryption_key = aws_kms_key.workspaces-kms.arn
+  workspace_properties {
+    compute_type_name = "STANDARD"
+    user_volume_size_gib = 50
+    root_volume_size_gib = 80
+    running_mode = "ALWAYS_ON"
+    running_mode_auto_stop_timeout_in_minutes = 60
+  }
+  tags = {
+    Name = "Ray Gill"
+    Environment = "Production"
+    "Deployed By" = "Enkompass"
+  }
+
+  depends_on = [
+    aws_iam_role.workspaces-default,
+    aws_workspaces_directory.workspaces-directory
+  ]
+}
